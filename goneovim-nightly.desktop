@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Goneovim Nightly
+Comment=Neovim GUI written in Golang, using a Golang qt backend (Nightly)
+Exec=/usr/bin/goneovim-nightly %F
+Icon=/usr/share/pixmaps/goneovim.ico
+Terminal=false
+StartupNotify=false
+Categories=Application;
