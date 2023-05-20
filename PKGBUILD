@@ -44,7 +44,10 @@ sha256sums=("7bc2b222e182cfb77c84688e46bc241b525949cfe8da5cdd8c9695ea16cc64c8"
 package() {
 	install -Dm0644 -t "$pkgdir/usr/share/pixmaps/" goneovim-nightly.ico
 	install -Dm0644 -t "$pkgdir/usr/share/applications/" goneovim-nightly.desktop
-	cd "$_archive"
+
+         tar -xf $_archive
+
+	cd "${_archive%.tar.bz2}"
 
          mv ./goneovim "./$_pkgname"
          mv ./runtime/doc/goneovim.txt "./runtime/doc/$_pkgname.txt"
