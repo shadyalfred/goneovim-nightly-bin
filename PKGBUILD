@@ -35,8 +35,8 @@ provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 _archive="goneovim-linux.tar.bz2"
 source=("$url/releases/download/nightly/$_archive"
-        goneovim.desktop
-        goneovim.ico)
+        goneovim-nightly.desktop
+        goneovim-nightly.ico)
 sha256sums=("7bc2b222e182cfb77c84688e46bc241b525949cfe8da5cdd8c9695ea16cc64c8"
             "7d4b2014d86c5246101c64ac692783c01c95a873392c4a14f0076eb090669b61"
             "0a36211b6ada93d811575b5ca9b33511e405f61cca791858ea2fe1eb5d29279e")
