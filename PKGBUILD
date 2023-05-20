@@ -16,14 +16,12 @@ depends=(expat
          glibc
          gtk3
          libglvnd
-         libspeechd
          libtiff5
          libx11
          libxcb
          neovim
          nspr
          nss
-         postgresql-libs
          qt5-declarative
          qt5-quickcontrols2
          qt5-sensors
@@ -32,7 +30,6 @@ depends=(expat
          qt5-tools
          qt5-wayland
          qt5-webengine
-         qt5-websockets
          zlib)
 provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
