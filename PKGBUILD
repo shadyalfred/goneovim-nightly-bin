@@ -2,9 +2,9 @@
 
 pkgname="goneovim-nightly-bin"
 _pkgname="${pkgname%-bin}"
-commit="c326565"
+commit="b02caa2"
 pkgver="$commit"
-pkgrel=1
+pkgrel=2
 pkgdesc="Neovim GUI written in Golang, using a Golang qt backend (Nightly)"
 arch=(x86_64)
 url="https://github.com/akiyosi/goneovim"
