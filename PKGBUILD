@@ -2,7 +2,7 @@
 
 pkgname="goneovim-nightly-bin"
 _pkgname="${pkgname%-bin}"
-commit="b02caa2"
+commit="599cae7"
 pkgver="$commit"
 pkgrel=1
 pkgdesc="Neovim GUI written in Golang, using a Golang qt backend (Nightly)"
@@ -37,7 +37,7 @@ _archive="goneovim-linux.tar.bz2"
 source=("$url/releases/download/nightly/$_archive"
         goneovim-nightly.desktop
         goneovim-nightly.ico)
-sha256sums=("65bcff980e668f0022d9f6b7f5559a7832fea2765bda4f20540c5ac0963300c0"
+sha256sums=("c62ce0f67c3f686ca245b908d340afba080dad343244dba5478f3ef596650bbd"
             "7d4b2014d86c5246101c64ac692783c01c95a873392c4a14f0076eb090669b61"
             "0a36211b6ada93d811575b5ca9b33511e405f61cca791858ea2fe1eb5d29279e")
 
