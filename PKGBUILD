@@ -50,8 +50,7 @@ package() {
 	cd "${_archive%.tar.bz2}"
 
          mv ./goneovim "./$_pkgname"
-         mv ./runtime/doc/goneovim.txt "./runtime/doc/$_pkgname.txt"
 
 	install -Dm0755 -t "$pkgdir/usr/bin/" "$_pkgname"
-	install -Dm0644 -t "$pkgdir/usr/share/nvim/runtime/doc/" "runtime/doc/$_pkgname.txt"
+	install -Dm0644 -t "$pkgdir/usr/share/nvim/runtime/doc/" "runtime/doc/goneovim.txt"
 }
