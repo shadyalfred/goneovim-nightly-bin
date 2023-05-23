@@ -47,7 +47,7 @@ package() {
 	install -Dm0644 -t "$pkgdir/usr/share/pixmaps/" goneovim-nightly.ico
 	install -Dm0644 -t "$pkgdir/usr/share/applications/" goneovim-nightly.desktop
 
-	cd "${_archive%.tar.bz}"
+	cd "${_archive%.tar.bz2}"
 
 	install -Dm0755 -t "$pkgdir/usr/bin/goneovim-nightly" "$_pkgname"
 	install -Dm0644 -t "$pkgdir/$XDG_DATA_HOME/nvim/site/doc/" "runtime/doc/goneovim.txt"
