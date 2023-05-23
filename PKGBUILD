@@ -35,9 +35,7 @@ provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 _archive="goneovim-linux.tar.bz2"
 
-DLAGENTS=('https::/usr/bin/curl -L -H "Accept: application/octet-stream" -o %o %u')
-
-source=($_archive::"https://api.github.com/repos/akiyosi/goneovim/releases/assets/109357358"
+source=("$url/releases/download/nightly/$_archive"
         goneovim-nightly.desktop
         goneovim-nightly.ico)
 
@@ -51,8 +49,6 @@ package() {
 
 	cd "$_archive"
 
-         mv ./goneovim "./$_pkgname"
-
-	install -Dm0755 -t "$pkgdir/usr/bin/" "$_pkgname"
+	install -Dm0755 -t "$pkgdir/usr/bin/goneovim-nightly" "$_pkgname"
 	install -Dm0644 -t "$pkgdir/$XDG_DATA_HOME/nvim/site/doc/" "runtime/doc/goneovim.txt"
 }
