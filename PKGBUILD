@@ -38,7 +38,7 @@ source=("https::/usr/bin/curl -L \
                 -H 'Accept: application/octet-stream' \
                 -H 'X-GitHub-Api-Version: 2022-11-28' \
                 https://api.github.com/repos/akiyosi/goneovim/releases/assets/109357358 \
-                --output '$_archive'"
+                --output $_archive"
         goneovim-nightly.desktop
         goneovim-nightly.ico)
 sha256sums=("17de5afe2885d91fc09cd6155d0a8e9ffdcb4412a8c7d6389e3e1853701d26fb"
