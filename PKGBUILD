@@ -34,12 +34,20 @@ depends=(expat
 provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 _archive="goneovim-linux.tar.bz2"
-source=("https://api.github.com/repos/akiyosi/goneovim/releases/assets/109357358"
+source=(goneovim-linux.tar.bz2
         goneovim-nightly.desktop
         goneovim-nightly.ico)
 sha256sums=("17de5afe2885d91fc09cd6155d0a8e9ffdcb4412a8c7d6389e3e1853701d26fb"
             "7d4b2014d86c5246101c64ac692783c01c95a873392c4a14f0076eb090669b61"
             "0a36211b6ada93d811575b5ca9b33511e405f61cca791858ea2fe1eb5d29279e")
+
+prepare() {
+         curl -L \
+                  -H "Accept: application/octet-stream" \
+                  -H "X-GitHub-Api-Version: 2022-11-28" \
+                  https://api.github.com/repos/akiyosi/goneovim/releases/assets/109357358 \
+                  --output goneovim-linux.tar.bz2
+}
 
 package() {
 	install -Dm0644 -t "$pkgdir/usr/share/pixmaps/" goneovim-nightly.ico
