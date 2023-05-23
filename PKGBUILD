@@ -34,7 +34,7 @@ depends=(expat
 provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 _archive="goneovim-linux.tar.bz2"
-source=("http::/usr/bin/curl -L \
+source=("curl -L \
                 -H 'Accept: application/octet-stream' \
                 -H 'X-GitHub-Api-Version: 2022-11-28' \
                 https://api.github.com/repos/akiyosi/goneovim/releases/assets/109357358 \
