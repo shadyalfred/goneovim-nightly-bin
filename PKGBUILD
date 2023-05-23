@@ -37,11 +37,11 @@ _archive="goneovim-linux.tar.bz2"
 source=(goneovim-linux.tar.bz2
         goneovim-nightly.desktop
         goneovim-nightly.ico)
-sha256sums=(https::/usr/bin/curl -L \
+sha256sums=("https::/usr/bin/curl -L \
                   -H "Accept: application/octet-stream" \
                   -H "X-GitHub-Api-Version: 2022-11-28" \
                   https://api.github.com/repos/akiyosi/goneovim/releases/assets/109357358 \
-                  --output "$_archive"
+                  --output '$_archive'"
             "7d4b2014d86c5246101c64ac692783c01c95a873392c4a14f0076eb090669b61"
             "0a36211b6ada93d811575b5ca9b33511e405f61cca791858ea2fe1eb5d29279e")
 
