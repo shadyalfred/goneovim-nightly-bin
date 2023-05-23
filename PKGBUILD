@@ -35,13 +35,8 @@ provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 _archive="goneovim-linux.tar.bz2"
 
-
-DLAGENTS=('file::/usr/bin/curl -qgC - -o %o %u'
-          'ftp::/usr/bin/curl -qgfC - --ftp-pasv --retry 3 --retry-delay 3 -o %o %u'
-          'http::/usr/bin/curl -qgb "" -fLC - --retry 3 --retry-delay 3 -o %o %u'
-          'https::/usr/bin/curl -qgb "" -fLC - -H "Accept: application/octet-stream" %u -o %o'
-          'rsync::/usr/bin/rsync --no-motd -z %u %o'
-          'scp::/usr/bin/scp -C %u %o')
+DLAGENTS=('http::/usr/bin/curl -qgb "" -fLC - -H "Accept: application/octet-stream" %u -o %o'
+          'https::/usr/bin/curl -qgb "" -fLC - -H "Accept: application/octet-stream" %u -o %o')
 
 source=($_archive::https://api.github.com/repos/akiyosi/goneovim/releases/assets/109357358
         goneovim-nightly.desktop
