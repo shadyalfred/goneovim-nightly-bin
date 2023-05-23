@@ -52,6 +52,5 @@ package() {
          mv "${_pkgname%-nightly}" $_pkgname
 
 	install -Dm0755 -t "$pkgdir/usr/bin/" "$_pkgname"
-	install -Dm0644 -t "$pkgdir/$XDG_DATA_HOME/nvim/site/doc/" "runtime/doc/goneovim.txt"
-         chown -R $USER $XDG_DATA_HOME/nvim/site/doc
+	install -Dm0644 -t "$pkgdir/usr/share/nvim/runtime/doc" "runtime/doc/goneovim.txt"
 }
