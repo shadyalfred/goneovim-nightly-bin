@@ -53,4 +53,5 @@ package() {
 
 	install -Dm0755 -t "$pkgdir/usr/bin/" "$_pkgname"
 	install -Dm0644 -t "$pkgdir/usr/share/nvim/runtime/doc" "runtime/doc/goneovim.txt"
+         nvim -es 'helptags ALL<CR>'
 }
