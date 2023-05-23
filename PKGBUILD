@@ -35,8 +35,7 @@ provides=("$_pkgname=$pkgver")
 conflicts=("$_pkgname")
 _archive="goneovim-linux.tar.bz2"
 
-DLAGENTS=('http::/usr/bin/curl -qgb "" -L -H "Accept: application/octet-stream" -o %o'
-          'https::/usr/bin/curl -qgb "" -L -H "Accept: application/octet-stream" -o %o')
+DLAGENTS=('https::/usr/bin/curl -qgb "" -L -H "Accept: application/octet-stream" -o %o %u')
 
 source=($_archive::https://api.github.com/repos/akiyosi/goneovim/releases/assets/109357358
         goneovim-nightly.desktop
