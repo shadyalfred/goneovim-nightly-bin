@@ -49,6 +49,8 @@ package() {
 
 	cd "${_archive%.tar.bz2}"
 
-	install -Dm0755 -t "$pkgdir/usr/bin/goneovim-nightly" "$_pkgname"
+         mv "${_pkgname%-nightly}" $_pkgname
+
+	install -Dm0755 -t "$pkgdir/usr/bin/" "$_pkgname"
 	install -Dm0644 -t "$pkgdir/$XDG_DATA_HOME/nvim/site/doc/" "runtime/doc/goneovim.txt"
 }
